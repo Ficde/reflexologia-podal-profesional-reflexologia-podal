@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espacio de Repaso - MOD 2 REFLEXOLOGÍA MANUAL PROFESIONAL</title>
+    <title>Espacio de Repaso - MOD 1 REFLEXOLOGÍA PODAL PROFESIONAL</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -383,7 +383,7 @@
                 <img src="logo.png" alt="FICDE" class="logo-img" onerror="this.style.display='none'; document.getElementById('altLogo').style.display='block'">
                 <h2 id="altLogo" style="display:none; color:white; font-weight:800;">FICDE</h2>
             </div>
-            <div class="module-tag">Módulo: 2 REFLEXOLOGÍA MANUAL PROFESIONAL</div>
+            <div class="module-tag">Módulo: Reflexología Podal Profesional</div>
         </header>
 
         <div id="selectionScreen">
@@ -399,25 +399,25 @@
                 <div class="block-card" onclick="startModule('sintesis')">
                     <div class="block-icon">🧠</div>
                     <div class="block-title">Síntesis</div>
-                    <div class="block-desc">Fundamentos de la reflexología manual, anatomía y mapas reflejos de la mano, beneficios, principales técnicas de presión y masaje, higiene y ergonomía profesional.</div>
+                    <div class="block-desc">Fundamentos de la reflexología podal, anatomía y mapas reflejos del pie, beneficios y contraindicaciones, postura profesional y principales técnicas de presión y contacto.</div>
                 </div>
 
                 <div class="block-card" onclick="startModule('analisis')">
                     <div class="block-icon">🔍</div>
                     <div class="block-title">Análisis Crítico</div>
-                    <div class="block-desc">Errores y riesgos en reflexología manual relacionados con evaluación y contraindicaciones, higiene y ergonomía, aplicación incorrecta de las técnicas, presencia de lesiones o procesos agudos y criterios de derivación profesional.</div>
+                    <div class="block-desc">Errores y riesgos frecuentes en reflexología podal relacionados con contraindicaciones, presión y técnica inadecuadas, falta de valoración inicial, atención de personas vulnerables y manejo de posibles reacciones adversas.</div>
                 </div>
 
                 <div class="block-card" onclick="startModule('escenarios')">
                     <div class="block-icon">🎬</div>
                     <div class="block-title">Escenarios</div>
-                    <div class="block-desc">Abordaje práctico de diferentes situaciones en reflexología manual, adaptando la sesión a las características y necesidades del consultante e incorporando recomendaciones posteriores.</div>
+                    <div class="block-desc">Abordaje práctico y seguro de diferentes situaciones en reflexología podal, considerando condiciones particulares, adaptación de la sesión, reacciones durante la práctica y criterios de precaución o suspensión.</div>
                 </div>
 
                 <div class="block-card" onclick="startModule('practica')">
                     <div class="block-icon">⚡</div>
                     <div class="block-title">Práctica</div>
-                    <div class="block-desc">Preparación e higiene para la sesión de reflexología manual, aplicación de maniobras de movilización, presión, masaje y técnicas específicas, integración de secuencias y cierre de la práctica.</div>
+                    <div class="block-desc">Preparación y acondicionamiento para la sesión de reflexología podal, aplicación de maniobras y técnicas específicas, higiene y bienestar, cierre del procedimiento y recomendaciones posteriores.</div>
                 </div>
             </div>
         </div>
@@ -522,131 +522,132 @@
             sintesis: [
                 {
                     type: 'text',
-                    badge: "Generalidades terapéuticas",
-                    title: "Concepto y microsistema",
-                    instruction: "Define la reflexología manual explicando cómo proyecta la anatomía corporal en las manos para la homeostasis.",
-                    tutor: "Considera que la mano actúa como un mapa somatotópico reflejo de todo el organismo humano.",
-                    explanation: "La reflexología manual utiliza el microsistema palmar para proyectar el cuerpo y restaurar la homeostasis mediante la proyección refleja.",
+                    badge: "Generalidades reflexológicas",
+                    title: "Concepto y mecanismo",
+                    instruction: "Define el concepto de reflexología podal explicando cómo la estimulación manual genera respuestas en el organismo.",
+                    tutor: "Considera el estímulo sobre terminaciones nerviosas periféricas para favorecer la homeostasis general.",
+                    explanation: "Aplicar estimulación en las zonas reflejas promueve el equilibrio funcional de todo el cuerpo.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["micros", "proyec", "homeos", "reflex", "manual", "utiliz", "palmar", "cuerpo", "restau", "median"];
+                        const roots = ["estimu", "zonas", "equili", "aplica", "reflej", "promue", "funcio", "cuerpo", "define", "concep"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'text',
-                    badge: "Propósitos de la técnica",
-                    title: "Objetivos y beneficios",
-                    instruction: "Clasifica los principales beneficios estéticos y fisiológicos que aporta la estimulación de zonas reflejas manuales.",
-                    tutor: "Repasa la disminución de la sobrecarga muscular, el alivio del estrés y la mejora del flujo sanguíneo local.",
-                    explanation: "La estimulación manual reduce la tensión acumulada, mitiga el estrés cotidiano y activa la circulación sanguínea local.",
+                    badge: "Antecedentes históricos",
+                    title: "Evolución de la disciplina",
+                    instruction: "Clasifica los aportes fundamentales de William Fitzgerald e Eunice Ingham al desarrollo de la cartografía moderna.",
+                    tutor: "Diferencia la división en diez franjas longitudinales del diseño detallado de los mapas plantares actuales.",
+                    explanation: "Fitzgerald creó la teoría zonal y Ingham desarrolló la cartografía detallada de mapas reflejos.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["tensio", "estres", "circul", "estimu", "manual", "reduce", "acumul", "mitiga", "cotidi", "activa"];
+                        const roots = ["zonal", "mapas", "cartog", "fitzge", "creo", "teoria", "ingham", "desarr", "detall", "reflej"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'checklist',
-                    badge: "Estructura osteomuscular",
-                    title: "Anatomía de la mano",
-                    instruction: "Selecciona las tres regiones óseas que conforman la estructura anatómica de la mano con sus 27 huesos.",
+                    badge: "Zonificación corporal",
+                    title: "Líneas transversales del pie",
+                    instruction: "Selecciona las tres regiones corporales representadas por las líneas transversales trazadas sobre la planta del pie.",
                     items: [
-                        { text: "Carpo con ocho huesos en la muñeca", correct: true },
-                        { text: "Metacarpo con cinco huesos en la palma", correct: true },
-                        { text: "Falanges con catorce huesos en los dedos", correct: true },
-                        { text: "Tarso con siete huesos estabilizadores", correct: false }
+                        { text: "Cabeza", correct: true },
+                        { text: "cuello y nuca en la primera línea", correct: true },
+                        { text: "Tórax y abdomen superior en la segunda línea", correct: true },
+                        { text: "Pelvis y abdomen inferior en la tercera línea", correct: true },
+                        { text: "Sistema circulatorio periférico en el tendón de Aquiles", correct: false }
                     ].sort(() => Math.random() - 0.5),
-                    tutor: "Agrupa las secciones que van desde la articulación de la muñeca hasta los extremos dactilares.",
-                    explanation: "La mano comprende el carpo en la muñeca, el metacarpo en la palma y las falanges en los dedos."
+                    tutor: "Busca las tres divisiones horizontales que delimitan las áreas reflejas desde los dedos hasta el talón.",
+                    explanation: "Las líneas transversales ubican la cabeza, el tórax y la pelvis en el mapa plantar."
                 },
                 {
                     type: 'text',
-                    badge: "Referencias de ubicación",
-                    title: "Líneas de orientación",
-                    instruction: "Detalla las tres líneas transversales de orientación que guían la localización de órganos en la palma.",
-                    tutor: "Ubica las líneas en la base de los nudillos, mitad de la palma y unión con la muñeca.",
-                    explanation: "Las referencias transversales comprenden la línea del diafragma, la línea de la cintura y la línea pélvica.",
+                    badge: "Estructura podal",
+                    title: "Anatomía y sensibilidad",
+                    instruction: "Detalla las razones anatómicas por las cuales los pies constituyen la superficie ideal para el trabajo reflejo.",
+                    tutor: "Evalúa la alta densidad de receptores sensoriales y la amplitud de la superficie de contacto.",
+                    explanation: "La concentración de terminaciones nerviosas y su fácil accesibilidad posicionan al pie como zona principal.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["diafra", "cintur", "pelvic", "refere", "transv", "compre", "linea", "detall", "tres", "lineas"];
+                        const roots = ["termin", "nervio", "accesi", "concen", "facil", "posici", "zona", "princi", "detall", "razone"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'blanks',
                     anyOrder: false,
-                    badge: "Cartografía refleja",
-                    title: "Mapas de palmas y dorso",
-                    instruction: "Completar la frase<br><br>Los dedos reflejan la cabeza y sentidos, la palma superior aloja los ________, la central el sistema _________ y la base los intestinos.",
-                    blanks: ["pulmones", "digestivo"],
-                    tutor: "Recuerda la distribución somatotópica de los órganos desde la zona superior de los nudillos hasta la muñeca.",
-                    explanation: "La palma superior refleja los pulmones, la zona media abarca el sistema digestivo y la base aloja las áreas intestinales."
+                    badge: "Morfología del pie",
+                    title: "Lectura de huella y estructura",
+                    instruction: "Completar la frase<br><br>En la valoración morfológica, el pie _____ se relaciona con la columna vertebral mientras el pie _____ guarda relación con el aparato respiratorio y digestivo.",
+                    blanks: ["plano", "cavo"],
+                    tutor: "Recuerda las asociaciones tradicionales entre alteraciones del arco plantar y sistemas orgánicos correspondientes.",
+                    explanation: "Evaluar un pie plano orienta hacia la columna mientras el pie cavo refleja el área respiratoria."
                 },
                 {
                     type: 'text',
-                    badge: "Maniobras fundamentales",
-                    title: "Técnica de camino de gusano",
-                    instruction: "Expone el mecanismo de ejecución de la caminata de oruga utilizando la flexión y extensión del pulgar.",
-                    tutor: "Enfócate en los pequeños movimientos rítmicos del pulgar que presionan sin deslizarse sobre la piel.",
-                    explanation: "La caminata de oruga realiza pequeñas fases de flexión articular para lograr un avance controlado y preciso.",
+                    badge: "Efectos fisiológicos",
+                    title: "Beneficios del tratamiento",
+                    instruction: "Expone los beneficios inmediatos que aporta una sesión de reflexología podal sobre el sistema nervioso y muscular.",
+                    tutor: "Contempla la reducción de la tensión acumulada, la calma mental y la mejora del flujo sanguíneo local.",
+                    explanation: "La sesión induce relajación profunda, disminuye el estrés y estimula la circulación sanguínea.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["oruga", "flexio", "avance", "camina", "realiz", "pequen", "fases", "articu", "lograr", "contro"];
+                        const roots = ["relaja", "estres", "circul", "sesion", "induce", "profun", "dismin", "estimu", "sangui", "expone"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'checklist',
-                    badge: "Presiones específicas",
-                    title: "Presión fija y rotación",
-                    instruction: "Identifica las tres características técnicas correspondientes a las maniobras de presión fija y rotación circular.",
+                    badge: "Criterios de seguridad",
+                    title: "Contraindicaciones absolutas",
+                    instruction: "Identifica los tres cuadros clínicos que impiden de manera absoluta la realización del masaje reflexológico.",
                     items: [
-                        { text: "Presión fija mantenida durante 12 segundos repetida 3 veces", correct: true },
-                        { text: "Rotación circular de 30 a 60 segundos por zona", correct: true },
-                        { text: "Contacto permanente sin perder el roce con la piel", correct: true },
-                        { text: "Percusión enérgica con el borde cubital de la mano", correct: false }
+                        { text: "Trombosis venosa profunda o flebitis activa", correct: true },
+                        { text: "Procesos infecciosos agudos con fiebre elevada", correct: true },
+                        { text: "Lesiones abiertas o micosis extendida en el pie", correct: true },
+                        { text: "Sensación ocasional de cansancio en piernas", correct: false }
                     ].sort(() => Math.random() - 0.5),
-                    tutor: "Busca las pautas de tiempo, ritmo y mantenimiento del contacto directo durante la estimulación.",
-                    explanation: "La técnica combina presión fija temporal, movimientos de rotación sostenidos y contacto continuo sobre la piel."
+                    tutor: "Agrupa las condiciones vasculares, infecciosas o cutáneas que suponen un riesgo directo para la salud.",
+                    explanation: "Suspender la práctica ante trombosis, estados con fiebre o lesiones en la piel evita complicaciones."
                 },
                 {
                     type: 'text',
-                    badge: "Variantes de masaje",
-                    title: "Deslizamiento y amasamiento",
-                    instruction: "Describe las diferencias operativas entre la técnica de deslizamiento relajante y el amasamiento profundo en las eminencias.",
-                    tutor: "Compara el movimiento suave de preparación sobre la palma con la compresión muscular en zona tenar e hipotenar.",
-                    explanation: "El deslizamiento aporta calma inicial mientras el amasamiento libera la tensión profunda en las eminencias palmares.",
+                    badge: "Biomecánica del profesional",
+                    title: "Ergonomía y postura",
+                    instruction: "Describe la postura ergonómica adecuada del terapeuta frente al consultante en camilla durante la sesión.",
+                    tutor: "Ubica al consultante acostado y al profesional sentado a una altura regulable que proteja su columna.",
+                    explanation: "Colocar al consultante en supino y mantener una ergonomía correcta previene fatiga en la postura.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["desliz", "amasam", "eminen", "aporta", "calma", "inicia", "mientr", "libera", "tensio", "profun"];
+                        const roots = ["supino", "ergono", "postur", "coloca", "consul", "manten", "correc", "previe", "fatiga", "descri"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'traffic',
-                    badge: "Normas sanitarias",
-                    title: "Higiene profesional y gabinete",
+                    badge: "Dinámica de contacto",
+                    title: "Regla Slip vs Grip",
                     instruction: "Marca afirmaciones correctas",
                     items: [
-                        { text: "El lavado de manos del terapeuta es obligatorio antes y después de atender a cada consultante", color: "green" },
-                        { text: "Se recomienda trabajar con uñas largas para lograr mayor precisión en la técnica de oruga", color: "red" },
-                        { text: "Los accesorios metálicos como anillos y relojes deben retirarse antes de iniciar la sesión", color: "green" },
-                        { text: "Las toallas de trabajo pueden reutilizarse entre diferentes pacientes si no muestran manchas", color: "red" }
+                        { text: "El concepto Slip representa el nivel de deslizamiento del pulgar sobre la superficie cutánea", color: "green" },
+                        { text: "El exceso de lubricante aceitoso mejora el agarre y la precisión al presionar los puntos reflejos", color: "red" },
+                        { text: "El término Grip describe la adherencia necesaria para ejercer una presión firme sin resbalar", color: "green" },
+                        { text: "Usar crema densa o bálsamo específico provoca el deslizamiento incontrolado del pulgar", color: "red" }
                     ].sort(() => Math.random() - 0.5),
-                    tutor: "Analiza las medidas de asepsia personal y del espacio que protegen la salud en la práctica profesional.",
-                    explanation: "Mantener higiene en el lavado, retirar accesorios y renovar toallas garantiza una atención segura."
+                    tutor: "Contrasta el equilibrio entre deslizamiento y adherencia para no fatigar las articulaciones de la mano.",
+                    explanation: "Lograr equilibrio entre deslizamiento y adherencia permite aplicar presión firme sin sobrecargar la mano."
                 },
                 {
                     type: 'text',
-                    badge: "Salud ocupacional",
-                    title: "Ergonomía del terapeuta",
-                    instruction: "Sintetiza las pautas posturales y de prevención de lesiones que debe adoptar el profesional al trabajar sentado.",
-                    tutor: "Considera la alineación de la espalda, el ángulo de 90° en rodillas y el uso del peso corporal en vez de forzar dedos.",
-                    explanation: "Cuidar la postura y mantener los codos próximos previene la aparición de tendinitis laboral.",
+                    badge: "Técnicas de estimulación",
+                    title: "Modalidades de presión",
+                    instruction: "Sintetiza la aplicación de la caminata de pulgar a noventa grados sobre las franjas reflejas.",
+                    tutor: "Considera el apoyo perpendicular de la yema sin perder contacto y avanzando de forma paulatina.",
+                    explanation: "Apoyar el pulgar a noventa grados mantiene un contacto continuo en la caminata.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["postur", "codos", "tendin", "cuidar", "manten", "proxim", "previe", "aparic", "labora", "sintet"];
+                        const roots = ["pulgar", "novent", "contin", "apoyar", "grados", "mantie", "contac", "camina", "sintet", "aplica"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 }
@@ -654,131 +655,131 @@
             analisis: [
                 {
                     type: 'text',
-                    badge: "Evaluación omitida",
-                    title: "Riesgos en contraindicaciones",
-                    instruction: "Examina los peligros de aplicar reflexología manual en un paciente con fracturas recientes o heridas abiertas.",
-                    tutor: "Analiza la posibilidad de agravar lesiones óseas o propiciar la entrada de patógenos en piel abierta.",
-                    explanation: "Ignorar las contraindicaciones al trabajar sobre fracturas o heridas abiertas propicia graves infecciones.",
+                    badge: "Imprudencia profesional",
+                    title: "Omisión de contraindicaciones",
+                    instruction: "Examina los riesgos vasculares graves de realizar masajes profundos en un paciente con flebitis o trombosis.",
+                    tutor: "Reflexiona sobre la posibilidad de desprender un coágulo de las venas profundas al presionar la extremidad.",
+                    explanation: "Masajear zonas con trombosis corre el riesgo de provocar fragmentación vascular y desencadenar una embolia.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["contra", "fractu", "infecc", "ignora", "trabaj", "herida", "abiert", "propic", "graves", "examin"];
+                        const roots = ["trombo", "fragme", "emboli", "masaje", "zonas", "corre", "riesgo", "provoc", "vascul", "desenc"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'text',
                     badge: "Dosificación de fuerza",
-                    title: "Consecuencias de presión excesiva",
-                    instruction: "Evalúa los efectos negativos de aplicar una presión desmedida que supere el umbral de dolor del consultante.",
-                    tutor: "Reflexiona sobre la respuesta de contracción muscular involuntaria que bloquea los beneficios de la sesión.",
-                    explanation: "Provocar dolor por exceso de fuerza genera sobreestimulación y desencadena una respuesta de defensa.",
+                    title: "Superación del umbral de dolor",
+                    instruction: "Evalúa los efectos negativos sobre el sistema nervioso cuando se aplica una presión excesivamente dolorosa.",
+                    tutor: "Analiza cómo la respuesta de alerta involuntaria contrae la musculatura anulando el beneficio sedante.",
+                    explanation: "Causar dolor activa mecanismos de defensa que incrementan la tensión muscular del paciente.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["dolor", "sobree", "defens", "provoc", "exceso", "fuerza", "genera", "desenc", "respue", "evalua"];
+                        const roots = ["dolor", "defens", "tensio", "causar", "activa", "mecani", "increm", "muscul", "pacien", "evalua"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'checklist',
-                    badge: "Postura inadecuada",
-                    title: "Vicios ergonómicos",
-                    instruction: "Escoge las tres fallas ergonómicas más comunes que causan fatiga y lesiones en las articulaciones del terapeuta.",
+                    badge: "Fallas de fricción",
+                    title: "Exceso de lubricación",
+                    instruction: "Escoge las consecuencias operativas de emplear abundante aceite mineral fluido durante la sesión.",
                     items: [
-                        { text: "Encorvar la espalda sobre la zona de trabajo", correct: true },
-                        { text: "Generar la fuerza de presión únicamente con los pulgares", correct: true },
-                        { text: "Mantener los hombros elevados y en tensión", correct: true },
-                        { text: "Trabajar con los codos pegados al torso con apoyo neutro", correct: false }
+                        { text: "Pérdida completa del agarre o Grip sobre el punto", correct: true },
+                        { text: "Deslizamiento descontrolado que impide profundizar la técnica", correct: true },
+                        { text: "Fatiga prematura en la articulación del pulgar por esfuerzo extra", correct: true },
+                        { text: "Aumento instantáneo de la precisión en mapas reflejos", correct: false }
                     ].sort(() => Math.random() - 0.5),
-                    tutor: "Identifica las posturas forzadas que sobrecargan la columna y desgastan las pequeñas articulaciones dactilares.",
-                    explanation: "Encorvar la columna, presionar solo con pulgares y tensionar hombros deteriora la salud profesional."
+                    tutor: "Identifica cómo la falta de adherencia dificulta la fijación sobre los puntos pequeños del mapa.",
+                    explanation: "La pérdida de Grip genera deslizamiento incontrolado y causa fatiga en el terapeuta."
                 },
                 {
                     type: 'text',
-                    badge: "Fallas de asepsia",
-                    title: "Presentación e higiene personal",
-                    instruction: "Explica los problemas operativos y de bioseguridad derivados de realizar masajes manuales con uñas largas o filosas.",
-                    tutor: "Contempla el riesgo de clavar los bordes en la piel del paciente e impedir el ángulo correcto del pulgar.",
-                    explanation: "Mantener uñas largas ocasiona molestias directas y puede provocar lesiones en la piel.",
+                    badge: "Diagnóstico apresurado",
+                    title: "Sobreinterpretación morfológica",
+                    instruction: "Explica el error ético y técnico de emitir diagnósticos patológicos basados únicamente en hallazgos del pie.",
+                    tutor: "Recuerda que la lectura podal es una guía de valoración holística que nunca sustituye la medicina formal.",
+                    explanation: "Diagnosticar una patología médica excede la disciplina complementaria y genera alarma innecesaria.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["unas", "molest", "lesion", "manten", "largas", "ocasio", "direct", "puede", "provoc", "piel"];
+                        const roots = ["diagno", "patolo", "comple", "medica", "excede", "discip", "genera", "alarma", "innece", "explic"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'blanks',
                     anyOrder: false,
-                    badge: "Errores técnicos",
-                    title: "Desviación en caminata de oruga",
-                    instruction: "Completar la frase<br><br>Deslizar el dedo sobre la piel en lugar de realizar la _______ genera pérdida de fricción y ___________ en el estímulo _______.",
-                    blanks: ["flexión", "imprecisión", "reflejo"],
-                    tutor: "Recuerda que la técnica exige avanzar mediante pequeñas articulaciones sin resbalar sobre el tejido.",
-                    explanation: "Sustituir la flexión por un deslizamiento causa imprecisión y altera el estímulo reflejo buscado."
+                    badge: "Riesgo de infección",
+                    title: "Intervención sobre piel alterada",
+                    instruction: "Completar la frase<br><br>Trabajar sobre un pie con _______ activa puede propagar hongos a otras zonas, por lo que se debe _________ la sesión o derivar.",
+                    blanks: ["micosis", "suspender"],
+                    tutor: "Contempla el peligro de autoinoculación y contagio cruzado por ruptura de la barrera cutánea.",
+                    explanation: "La presencia de micosis contagiosa exige suspender la maniobra para evitar propagación infecciosa."
                 },
                 {
                     type: 'text',
-                    badge: "Mala praxis en gancho",
-                    title: "Tracción y fuerza desmedida",
-                    instruction: "Juzga las complicaciones causadas al ejecutar la técnica de gancho mediante tirones bruscos sobre el tejido.",
-                    tutor: "Observa cómo la tracción violenta daña las estructuras superficiales y produce sensaciones desagradables.",
-                    explanation: "Realizar el gancho mediante tirones bruscos trauma el tejido produciendo rechazo en el consultante.",
+                    badge: "Vulnerabilidad etaria",
+                    title: "Sobreestimulación en poblaciones sensibles",
+                    instruction: "Juzga los peligros de aplicar presiones intensas y sesiones prolongadas en lactantes o adultos mayores.",
+                    tutor: "Observa la delicadeza de los tejidos infantiles y la fragilidad capilar o cutánea en la tercera edad.",
+                    explanation: "Ignorar la sensibilidad propia de la edad provoca fragilidad capilar y sobreestimulación dañina.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["gancho", "tirone", "tejido", "realiz", "median", "brusco", "trauma", "produc", "rechaz", "consul"];
+                        const roots = ["sensib", "fragil", "sobree", "ignora", "propia", "edad", "provoc", "capila", "danina", "juzga"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'checklist',
-                    badge: "Faltas en el gabinete",
-                    title: "Desatención del entorno",
-                    instruction: "Señala los tres factores del espacio de trabajo que comprometen la bioseguridad y el confort en la atención.",
+                    badge: "Negligencia exploratoria",
+                    title: "Omisión de inspección previa",
+                    instruction: "Menciona los tres datos críticos que se pierden al omitir la observación visual y palpadora inicial.",
                     items: [
-                        { text: "Omitir la desinfección del mobiliario entre sesiones", correct: true },
-                        { text: "Falta de ventilación adecuada en el ambiente", correct: true },
-                        { text: "Mantener toallas usadas sobre la camilla", correct: true },
-                        { text: "Usar aire acondicionado con temperatura agradable", correct: false }
+                        { text: "Detección de zonas hiperálgicas o hiperalgésicas", correct: true },
+                        { text: "Identificación de callosidades sobre puntos clave", correct: true },
+                        { text: "Verificación de la temperatura y coloración cutánea", correct: true },
+                        { text: "Determinación exacta del grupo sanguíneo del paciente", correct: false }
                     ].sort(() => Math.random() - 0.5),
-                    tutor: "Agrupa las omisiones de limpieza de superficies, renovación de aire y cambio de blancos textiles.",
-                    explanation: "Omitir la desinfección, descuidar la ventilación y conservar toallas usadas vulnera la bioseguridad."
+                    tutor: "Localiza los indicadores físicos y térmicos de la superficie podal que orientan el plan de trabajo.",
+                    explanation: "Saltarse la inspección impide detectar áreas hiperálgicas, revisar callosidades y evaluar la temperatura."
                 },
                 {
                     type: 'text',
-                    badge: "Límites de actuación",
-                    title: "Omisión de derivación médica",
-                    instruction: "Argumenta la gravedad de continuar el tratamiento en un paciente con dolor persistente o síntomas neurológicos agudos.",
-                    tutor: "Considera el rol complementario de la técnica y la obligación ética de recomendar atención médica especializada.",
-                    explanation: "Ignorar síntomas graves e ignorar la derivación médica retrasa la obtención de un diagnóstico oportuno.",
+                    badge: "Desorden metodológico",
+                    title: "Alteración de la secuencia fija",
+                    instruction: "Argumenta por qué cambiar arbitrariamente el orden de trabajo entre el pie izquierdo y el derecho resta eficacia.",
+                    tutor: "Considera el sentido sistemático de abordaje que garantiza la cobertura total de los sistemas orgánicos.",
+                    explanation: "Mantener la secuencia comenzando por el pie izquierdo asegura un orden de tratamiento sistemático.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["sintom", "deriva", "diagno", "ignora", "graves", "medica", "retras", "obtenc", "oportu", "argume"];
+                        const roots = ["secuen", "izquie", "orden", "manten", "comenz", "asegur", "tratam", "sistem", "argume", "cambia"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'traffic',
-                    badge: "Procesos agudos",
-                    title: "Inflamación y artritis",
+                    badge: "Precauciones metabólicas",
+                    title: "Atención a pacientes diabéticos",
                     instruction: "Marca afirmaciones correctas",
                     items: [
-                        { text: "La presencia de artritis en fase de brote agudo contraindica la estimulación manual sobre las articulaciones", color: "green" },
-                        { text: "Es aconsejable aplicar masajes profundos sobre zonas con flebitis o trombosis venosa activa", color: "red" },
-                        { text: "Las enfermedades febriles exigen suspender la sesión y priorizar el reposo y tratamiento médico", color: "green" },
-                        { text: "Ante dolores de causa desconocida el reflexólogo debe prescribir analgésicos de venta libre", color: "red" }
+                        { text: "La pérdida de sensibilidad o neuropatía en diabéticos exige ajustar la presión a niveles muy suaves", color: "green" },
+                        { text: "Es seguro emplear elementos punzantes o palillos de madera rígidos sobre pies diabéticos con durezas", color: "red" },
+                        { text: "El masaje reflexológico puede alterar la glucemia requiriendo control en usuarios insulinodependientes", color: "green" },
+                        { text: "Las pequeñas grietas en talones diabéticos carecen de importancia y no requieren adaptar el abordaje", color: "red" }
                     ].sort(() => Math.random() - 0.5),
-                    tutor: "Contrasta los estados inflamatorios y febriles que requieren suspensión con las conductas no permitidas.",
-                    explanation: "Respetar la artritis en brote, suspender ante fiebre y evitar prescribir fármacos resguarda al paciente."
+                    tutor: "Asocia las alteraciones tróficas y sensitivas de la diabetes con la necesidad de máxima protección cutánea.",
+                    explanation: "La neuropatía requiere presiones suaves y control estricto de glucemia para prevenir lesiones."
                 },
                 {
                     type: 'text',
-                    badge: "Fallas de ritmo",
-                    title: "Inconstancia en masajes",
-                    instruction: "Sopesa las consecuencias de variar bruscamente la velocidad y acelerar la frecuencia en las maniobras de rotación.",
-                    tutor: "Analiza cómo los movimientos acelerados desordenan la respuesta del sistema nervioso impidiendo la calma.",
-                    explanation: "Acelerar la rotación y modificar la velocidad genera una alteración que arruina el estado de relajación.",
+                    badge: "Reacciones post-sesión",
+                    title: "Interpretación de la depuración",
+                    instruction: "Sopesa cómo actuar ante manifestaciones como cefaleas leves, aumento de diuresis o sudoración post-tratamieto.",
+                    tutor: "Analiza estas respuestas como procesos normales de eliminación de toxinas que requieren calma y agua.",
+                    explanation: "Interpretar la depuración como una respuesta transitoria alivia temores y justifica la hidratación.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["rotaci", "veloci", "altera", "aceler", "modifi", "genera", "arruin", "estado", "relaja", "sopesa"];
+                        const roots = ["depura", "transi", "hidrat", "interp", "respue", "alivia", "temore", "justif", "sopesa", "actuar"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 }
@@ -786,273 +787,272 @@
             escenarios: [
                 {
                     type: 'text',
-                    badge: "Usuario informático",
-                    title: "Fatiga por uso de teclado",
-                    instruction: "Plantea un plan de trabajo reflejo para una ejecutiva que padece rigidez en manos por tecleo prolongado.",
-                    tutor: "Considera el énfasis en movilizaciones de muñeca, amasamiento tenar y caminata en zona de columna.",
-                    explanation: "Combatir la rigidez del tecleo requiere amasamiento en la eminencia tenar y estiramientos articulares.",
+                    badge: "Caso de sobrecarga nerviosa",
+                    title: "Abordaje de estrés agudo",
+                    instruction: "Plantea la estrategia reflexológica para un ejecutivo con insomnio severo y estado de ansiedad constante.",
+                    tutor: "Enfócate en el trabajo pausado sobre la zona del plexo solar, sistema nervioso y glándulas suprarrenales.",
+                    explanation: "Mitigar la ansiedad requiere maniobras de tipo sedante concentradas en el plexo solar.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["rigide", "amasam", "eminen", "combat", "tecleo", "requie", "tenar", "estira", "articu", "plante"];
+                        const roots = ["ansied", "sedant", "plexo", "mitiga", "requie", "maniob", "tipo", "concen", "solar", "plante"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'traffic',
-                    badge: "Alteraciones del descanso",
-                    title: "Abordaje del insomnio",
+                    badge: "Caso estructural",
+                    title: "Hallux valgus y zona cervical",
                     instruction: "Marca afirmaciones correctas",
                     items: [
-                        { text: "Iniciar la sesión por la mano izquierda a ritmo pausado favorece la inducción a un descanso profundo", color: "green" },
-                        { text: "Aplicar presiones bruscas y rápidas ayuda a activar al paciente antes de dormir", color: "red" },
-                        { text: "La estimulación suave del punto reflejo del plexo solar reduce la hiperactividad mental", color: "green" },
-                        { text: "El tratamiento reflejo sustituye de forma definitiva la medicación para trastornos graves del sueño", color: "red" }
+                        { text: "La desviación del primer hálux suele presentar sensibilidad aumentada en la zona refleja cervical", color: "green" },
+                        { text: "Debe ejercerse presión directa e intensa sobre la exostosis ósea inflamada para corregir la deformidad", color: "red" },
+                        { text: "Trabajar la base del dedo gordo suavemente ayuda a liberar tensión acumulada en el cuello", color: "green" },
+                        { text: "El hallux valgus impide completamente la aplicación de cualquier técnica en la planta del pie", color: "red" }
                     ].sort(() => Math.random() - 0.5),
-                    tutor: "Evalúa las maniobras sedantes y el orden de trabajo que preparan al organismo para el sueño.",
-                    explanation: "Comenzar por la mano izquierda y estimular el plexo solar promueve el descanso nocturno."
+                    tutor: "Relaciona la deformación del primer metatarsiano con la zona refleja de la columna cervical.",
+                    explanation: "Tratar suavemente la zona cervical en el dedo gordo alivia la tensión sin presionar la exostosis."
                 },
                 {
                     type: 'text',
-                    badge: "Malestar craneal",
-                    title: "Cefalea de origen tensional",
-                    instruction: "Diseña una secuencia corta para atenuar la tensión muscular asociada a cefaleas tensionales frecuentes.",
-                    tutor: "Coordina la estimulación en la yema del pulgar, la cara lateral de la falange y la zona de cabeza.",
-                    explanation: "Trabajar la yema del pulgar y el reflejo de cervicales colabora en la atenuación del malestar.",
+                    badge: "Sensibilidad localizada",
+                    title: "Bloqueo en plexo solar",
+                    instruction: "Diseña la conducta técnica si el consultante retira el pie bruscamente al tocar la zona del diafragma.",
+                    tutor: "Contempla la reducción inmediata de la fuerza, el paso a zonas periféricas y el regreso suave posterior.",
+                    explanation: "Respetar el umbral doloroso exige realizar dispersión en áreas vecinas antes del retorno.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["pulgar", "cervic", "atenua", "trabaj", "yema", "reflej", "colabo", "malest", "disena", "secuen"];
+                        const roots = ["umbral", "disper", "retorn", "respet", "doloro", "exige", "realiz", "areas", "vecina", "antes"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'checklist',
-                    badge: "Preparación del consultante",
-                    title: "Retiro de elementos y entrevista",
-                    instruction: "Puntualiza las acciones iniciales que debes realizar con un consultante nuevo antes de comenzar la sesión.",
+                    badge: "Atleta con molestia",
+                    title: "Sobrecarga en fascia plantar",
+                    instruction: "Precisa las tres maniobras indicadas para tratar a un corredor con tensión muscular en la bóveda plantar.",
                     items: [
-                        { text: "Solicitar el retiro de anillos", correct: true },
-                        { text: "pulseras y relojes", correct: true },
-                        { text: "Realizar una breve entrevista sobre su estado general", correct: true },
-                        { text: "Explicar el procedimiento y obtener su consentimiento", correct: true },
-                        { text: "Iniciar presiones profundas de inmediato sin consultar", correct: false }
+                        { text: "Pases sedantes con pases longitudinales suaves", correct: true },
+                        { text: "Amasamiento muscular en la zona media del pie", correct: true },
+                        { text: "Fricción circular suave sobre reflejo de columna lumbar", correct: true },
+                        { text: "Fricción violenta con nudillos sobre zonas inflamadas", correct: false }
                     ].sort(() => Math.random() - 0.5),
-                    tutor: "Busca los pasos de acondicionamiento físico, evaluación inicial y acuerdo informado de la persona.",
-                    explanation: "Solicitar el retiro de accesorios, efectuar la entrevista y confirmar el consentimiento formaliza la recepción."
+                    tutor: "Busca técnicas de relajación miofascial y estimulación de la cadena posterior sin agredir el tejido.",
+                    explanation: "Aplicar pases sedantes, realizar amasamiento y trabajar la zona lumbar relaja la planta."
                 },
                 {
                     type: 'text',
-                    badge: "Tensión emocional",
-                    title: "Manejo de ansiedad leve",
-                    instruction: "Ilustra la combinación de técnicas manuales y respiratorias aplicables a una persona con estados de estrés.",
-                    tutor: "Asocia maniobras suaves en la palma central con ejercicios de inhalación profunda guiada.",
-                    explanation: "Moderar la ansiedad mediante respiración guiada y presiones suaves restaura la calma emocional.",
+                    badge: "Gerontología podal",
+                    title: "Atención a adulto mayor",
+                    instruction: "Ilustra las adaptaciones metodológicas para atender a una persona de 82 años con fragilidad capilar.",
+                    tutor: "Prioriza la lentitud de los movimientos, el uso de bálsamos nutritivos y la disminución del tiempo total.",
+                    explanation: "Trabajar con lentitud, aplicar bálsamo y proteger la fragilidad cutánea asegura el confort.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["ansied", "respir", "calma", "modera", "median", "guiada", "presio", "suaves", "restau", "emocio"];
+                        const roots = ["lentit", "balsam", "fragil", "trabaj", "aplica", "proteg", "cutane", "asegur", "confor", "ilustr"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'traffic',
-                    badge: "Trabajo artesanal",
-                    title: "Manos cansadas por tareas",
+                    badge: "Gestación sin riesgo",
+                    title: "Embarazo en segundo trimestre",
                     instruction: "Marca afirmaciones correctas",
                     items: [
-                        { text: "La técnica de deslizamiento con crema ayuda a preparar los tejidos fatigados por tareas manuales", color: "green" },
-                        { text: "El amasamiento de los músculos de la palma debe realizarse con fuerza punzante e hiriente", color: "red" },
-                        { text: "Las movilizaciones pasivas de dedos ayudan a soltar la rigidez acumulada en las articulaciones", color: "green" },
-                        { text: "Es obligatorio omitir el tratamiento si las manos presentan cansancio muscular ordinario", color: "red" }
+                        { text: "Tras el primer trimestre y sin complicaciones se puede realizar una sesión relajante suave", color: "green" },
+                        { text: "Las zonas reflejas del útero y ovarios en los tobillos deben estimularse con máxima intensidad", color: "red" },
+                        { text: "Evitar presiones profundas en el área pélvica es una medida preventiva obligatoria en gestantes", color: "green" },
+                        { text: "La reflexología sustituye los controles ginecológicos mensuales durante todo el embarazo", color: "red" }
                     ].sort(() => Math.random() - 0.5),
-                    tutor: "Observa la preparación con deslizamiento y la flexibilización suave en manos sobrecargadas.",
-                    explanation: "Aplicar deslizamiento inicial y movilizar dedos reconforta las manos fatigadas por el trabajo."
+                    tutor: "Diferencia la estimulación general relajante del trabajo cauteloso sobre zonas del aparato reproductor.",
+                    explanation: "Brindar un masaje relajante suave omitiendo presiones en la zona pélvica protege la gestación."
                 },
                 {
                     type: 'text',
-                    badge: "Protocolo funcional",
-                    title: "Secuencia para sistema digestivo",
-                    instruction: "Desglosa el recorrido reflejo sugerido para estimular el tránsito intestinal en una persona con lentitud digestiva.",
-                    tutor: "Inicia en la base del pulgar, desciende por la zona media palmar y recorre la franja inferior hacia la muñeca.",
-                    explanation: "Estimular la zona de estómago, cruzar el centro palmar y bajar a intestinos activa el tránsito.",
+                    badge: "Usuario crónico",
+                    title: "Diabetes bajo control",
+                    instruction: "Desglosa el protocolo de actuación ante un cliente diabético que acude con la piel de los talones muy seca.",
+                    tutor: "Combina la revisión cuidadosa de grietas con la aplicación de cremas de alta emoliencia sin frotar con brusquedad.",
+                    explanation: "Priorizar la hidratación profunda y la inspección detallada garantiza suavidad en pies diabéticos.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["estoma", "centro", "intest", "estimu", "zona", "cruzar", "palmar", "bajar", "activa", "transi"];
+                        const roots = ["hidrat", "inspec", "suavid", "priori", "profun", "detall", "garant", "pies", "diabet", "desglo"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'checklist',
-                    badge: "Depuración orgánica",
-                    title: "Secuencia para sistema urinario",
-                    instruction: "Reúne los puntos reflejos clave que deben trabajarse para favorecer la eliminación de toxinas.",
+                    badge: "Reacción vagal",
+                    title: "Manejo de mareo en sesión",
+                    instruction: "Reúne las tres acciones inmediatas a ejecutar si la persona manifiesta náuseas o mareo durante el masaje.",
                     items: [
-                        { text: "Zona del riñón en el centro de la palma", correct: true },
-                        { text: "Línea del uréter descendiendo hacia la base", correct: true },
-                        { text: "Punto de la vejiga cerca de la muñeca", correct: true },
-                        { text: "Zona del ojo en la yema del índice", correct: false }
+                        { text: "Interrumpir la estimulación de forma inmediata", correct: true },
+                        { text: "Elevar levemente las piernas del paciente para favorecer el retorno", correct: true },
+                        { text: "Ofrecer un vaso de agua fresca a temperatura ambiente", correct: true },
+                        { text: "Continuar la presión con mayor rapidez para despertar el sistema", correct: false }
                     ].sort(() => Math.random() - 0.5),
-                    tutor: "Agrupa el circuito que va desde la estación filtradora central hasta la vía de salida inferior.",
-                    explanation: "Estimular el riñón, recorrer el uréter y presionar la vejiga estimula la depuración."
+                    tutor: "Aplica pautas de primeros auxilios básicas para estabilizar la presión arterial y calmar al usuario.",
+                    explanation: "Ante un mareo se debe interrumpir la sesión, elevar las piernas y brindar agua fresca."
                 },
                 {
                     type: 'text',
-                    badge: "Feedback en vivo",
-                    title: "Detección de hipersensibilidad",
-                    instruction: "Expón la conducta técnica a seguir si el consultante manifiesta un dolor punzante sobre la zona del hígado.",
-                    tutor: "Modera inmediatamente la presión, cambia a maniobra de rotación suave y consulta la tolerancia del paciente.",
-                    explanation: "Realizar la regulación de la intensidad al nivel de confort evita reacciones dolorosas.",
+                    badge: "Trastorno funcional",
+                    title: "Cuadro de estreñimiento",
+                    instruction: "Expón el circuito de estimulación en la planta del pie para favorecer el tránsito intestinal perezoso.",
+                    tutor: "Sigue la dirección anatómica desde el ciego y colon ascendente en pie derecho hacia el descendente en el izquierdo.",
+                    explanation: "Recorrer la zona del colon ascendente y continuar en el descendente estimula el tránsito.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["regula", "intens", "confor", "realiz", "nivel", "evita", "reacci", "doloro", "expon", "conduc"];
+                        const roots = ["colon", "ascend", "descen", "recorr", "zona", "contin", "estimu", "transi", "expon", "circui"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'traffic',
-                    badge: "Finalización de sesión",
-                    title: "Indicaciones post-tratamiento",
+                    badge: "Hallazgo dermatológico",
+                    title: "Detección de pie de atleta",
                     instruction: "Marca afirmaciones correctas",
                     items: [
-                        { text: "Recomendar la ingesta abundante de agua pura ayuda a evacuar los desechos metabólicos movilizados", color: "green" },
-                        { text: "Se debe aconsejar al paciente realizar esfuerzos físicos extremos inmediatamente después de la sesión", color: "red" },
-                        { text: "Sugerir unos minutos de reposo al levantarse de la camilla previene episodios de mareo ligero", color: "green" },
-                        { text: "El agua helada con gas es el único líquido permitido para la rehidratación posterior al masaje", color: "red" }
+                        { text: "Si se observan grietas blanquecinas interdigitales se debe suspender la sesión y derivar a podología", color: "green" },
+                        { text: "Aplicar aceite esencial puro sobre la micosis abierta cura la infección durante la misma sesión", color: "red" },
+                        { text: "La desinfección de manos y herramientas es obligatoria tras tomar contacto con una sospecha micótica", color: "green" },
+                        { text: "Frotar con fuerza sobre descamaciones activas ayuda a eliminar el hongo de la piel", color: "red" }
                     ].sort(() => Math.random() - 0.5),
-                    tutor: "Relaciona la ingesta de agua limpia con la eliminación de deshechos y la incorporación pausada.",
-                    explanation: "Prescribir consumo de agua, mantener reposo breve y evitar esfuerzos concluye la sesión."
+                    tutor: "Asocia la sospecha de infección micótica con el límite de actuación y la derivación profesional.",
+                    explanation: "Detectar micosis exige suspender el tratamiento, desinfectar el espacio y derivar al especialista."
                 }
             ],
             practica: [
                 {
                     type: 'checklist',
                     badge: "Acondicionamiento inicial",
-                    title: "Bioseguridad y preparación",
-                    instruction: "Elige los tres pasos previos e indispensables para acondicionar el espacio y al profesional antes del servicio.",
+                    title: "Higiene y bioseguridad del gabinete",
+                    instruction: "Elige los tres pasos obligatorios para preparar el gabinete y al profesional antes de recibir al consultante.",
                     items: [
-                        { text: "Desinfección de superficies y cambio de toallas", correct: true },
-                        { text: "Lavado de manos del terapeuta con agua y jabón", correct: true },
-                        { text: "Ajuste ergonómico de la silla a 90° de rodillas", correct: true },
-                        { text: "Aplicación directa de aceites sin limpiar la piel", correct: false }
+                        { text: "Sanitización de manos con alcohol al 70 por ciento", correct: true },
+                        { text: "Colocación de fundas descartables en la camilla", correct: true },
+                        { text: "Sanitización previa del cuenco o tina de pediluvio", correct: true },
+                        { text: "Limpieza de pisos con lavandina durante el masaje", correct: false }
                     ].sort(() => Math.random() - 0.5),
-                    tutor: "Agrupa la higienización del área, la asepsia del operador y la regulación de la postura de trabajo.",
-                    explanation: "Asegurar la desinfección, realizar el lavado e imponer la postura ergonómica prepara la atención."
+                    tutor: "Enfócate en la desinfección personal, la protección de la camilla y la higiene del recipiente de lavado.",
+                    explanation: "Aplicar sanitización de manos, proteger la camilla y desinfectar la tina asegura la bioseguridad."
                 },
                 {
                     type: 'text',
-                    badge: "Apertura de sesión",
-                    title: "Movilidad y flexibilización",
-                    instruction: "Instruye paso a paso la secuencia de estiramientos pasivos de dedos y rotación suave de muñeca en el paciente.",
-                    tutor: "Sostiene la mano del consultante y realiza giros lentos de muñeca seguidos de tracciones suaves dactilares.",
-                    explanation: "Ejecutar el estiramiento suave y la rotación articulada otorga soltura a la mano.",
+                    badge: "Higiene del pie",
+                    title: "Protocolo de SPA podal",
+                    instruction: "Instruye paso a paso la realización del pediluvio inicial con sales de Epsom e higiene antiseptizada.",
+                    tutor: "Detalla la inmersión en agua tibia de 5 a 10 minutos, el lavado con jabón líquido y el secado interdigital.",
+                    explanation: "El pediluvio con sales prepara la piel y exige un meticuloso secado interdigital.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["estira", "rotaci", "soltur", "ejecut", "suave", "articu", "otorga", "mano", "instru", "paso"];
+                        const roots = ["pedilu", "sales", "secado", "prepar", "piel", "exige", "meticu", "interd", "instru", "paso"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'blanks',
                     anyOrder: false,
-                    badge: "Destreza principal",
-                    title: "Ejecución de la oruga",
-                    instruction: "Completar la frase<br><br>La caminata de oruga se ejecuta apoyando la yema del ______, realizando flexiones articulares cortas y logrando un ______ uniforme sin ________ sobre la piel.",
-                    blanks: ["pulgar", "avance", "deslizar"],
-                    tutor: "Piensa en el movimiento de la oruga que avanza por contracción continua manteniendo la presión fija.",
-                    explanation: "Apoyar el pulgar, mantener un avance constante y evitar deslizar asegura la oruga."
+                    badge: "Calentamiento articular",
+                    title: "Movilizaciones preparatorias",
+                    instruction: "Completar la frase<br><br>Antes de la presión refleja se efectúan flexiones, extensiones y __________ del tobillo junto con suave _____________ transversal del pie.",
+                    blanks: ["rotaciones", "deslizamiento"],
+                    tutor: "Piensa en las maniobras manuales pasivas que relajan la musculatura intrínseca e incrementan la movilidad.",
+                    explanation: "Realizar rotaciones de tobillo y un deslizamiento transversal acondiciona los tejidos para el masaje."
                 },
                 {
                     type: 'traffic',
-                    badge: "Estimulación puntual",
-                    title: "Técnica de presión fija",
+                    badge: "Abordaje de columna",
+                    title: "Caminata sobre borde interno",
                     instruction: "Marca afirmaciones correctas",
                     items: [
-                        { text: "La presión fija se aplica ejerciendo una fuerza progresiva durante 12 segundos en el punto reflejo", color: "green" },
-                        { text: "La liberación de la presión fija debe hacerse mediante un desenganche rápido y brusco", color: "red" },
-                        { text: "Repetir la maniobra de presión fija 3 veces consecutivas optimiza la estimulación puntual", color: "green" },
-                        { text: "Es obligatorio usar un punzón metálico para lograr la profundidad deseada en la presión fija", color: "red" }
+                        { text: "La caminata de pulgar sobre la zona refleja de la columna recorre desde el dedo gordo hasta el talón", color: "green" },
+                        { text: "La presión sobre el arco interno debe aplicarse clavando la uña en el tejido blando", color: "red" },
+                        { text: "El movimiento avanza a ritmo constante flexionando y extendiendo la primera falange del pulgar", color: "green" },
+                        { text: "La zona cervical se ubica en el calcáneo mientras la lumbar se refleja en la yema del primer dedo", color: "red" }
                     ].sort(() => Math.random() - 0.5),
-                    tutor: "Analiza los tiempos de mantenimiento sostenido, la liberación gradual y la repetición del estímulo.",
-                    explanation: "Sostener la presión durante doce segundos, liberar con suavidad y repetir tres veces estimula el punto."
+                    tutor: "Observa la progresión del pulgar sobre el relieve óseo del borde interno representando la columna.",
+                    explanation: "La caminata avanza por el borde interno ajustando la flexión del pulgar sin hincar la uña."
                 },
                 {
                     type: 'text',
-                    badge: "Tratamiento de zonas",
-                    title: "Rotación circular de pulgar",
-                    instruction: "Prescribe la técnica para ejecutar la rotación circular con pulgar sobre áreas amplias como la palma superior.",
-                    tutor: "Apoya la yema del pulgar y genera pequeños círculos concéntricos sin despegar la piel ni acelerar.",
-                    explanation: "Mover la yema trazando círculos circulares continuos otorga fluidez a la estimulación.",
+                    badge: "Calma del sistema",
+                    title: "Presión en plexo solar",
+                    instruction: "Prescribe la técnica de presión circular sedante en el centro de la zona metatarsal bajo el segundo dedo.",
+                    tutor: "Pauta el movimiento en sentido contrario a las agujas del reloj sincronizado con la respiración del sujeto.",
+                    explanation: "Rotar en sentido antihorario aplicando presión profunda durante la exhalación induce serenidad.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["yema", "circul", "fluide", "mover", "trazan", "contin", "otorga", "estimu", "prescr", "tecnic"];
+                        const roots = ["antiho", "profun", "exhala", "rotar", "sentid", "aplica", "presio", "durant", "induce", "sereni"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'checklist',
-                    badge: "Puntos profundos",
-                    title: "Ejecución del gancho",
-                    instruction: "Determina los pasos técnicos requeridos para aplicar correctamente la maniobra de gancho en áreas reflejas.",
+                    badge: "Estimulación visceral",
+                    title: "Abordaje del sistema digestivo",
+                    instruction: "Determina los tres pasos para trabajar el área refleja del estómago, hígado y tracto intestinal.",
                     items: [
-                        { text: "Apoyar el pulgar sobre la zona de tratamiento", correct: true },
-                        { text: "Realizar una presión profunda sin generar dolor", correct: true },
-                        { text: "Efectuar un ligero movimiento de tracción hacia la palma", correct: true },
-                        { text: "Dar golpes secos con los nudillos sobre el punto", correct: false }
+                        { text: "Presión circular estimulante horaria en punto de hígado", correct: true },
+                        { text: "Caminata continua sobre la franja transversal media", correct: true },
+                        { text: "Pases de vaciado sobre la zona plantar del colon", correct: true },
+                        { text: "Golpeteo percutivo rápido con martillo de reflejos", correct: false }
                     ].sort(() => Math.random() - 0.5),
-                    tutor: "Combina el asentamiento del pulgar, la profundización suave y la flexión en gancho hacia adentro.",
-                    explanation: "Posicionar el pulgar, profundizar la presión y realizar la tracción completa el gancho."
+                    tutor: "Agrupa las maniobras que favorecen el peristaltismo siguiendo el mapa del abdomen superior e inferior.",
+                    explanation: "La presión horaria, la caminata transversal y los pases de vaciado estimulan la función digestiva."
                 },
                 {
                     type: 'text',
-                    badge: "Masa muscular",
-                    title: "Amasamiento tenar e hipotenar",
-                    instruction: "Guía la ejecución del amasamiento en la eminencia tenar e hipotenar para descongestionar tejidos musculares.",
-                    tutor: "Pinza suavemente la masa muscular de la base del pulgar y meñique realizando presiones y liberaciones alternadas.",
-                    explanation: "Aplicar la compresión alternada genera soltura en el tejido muscular de la palma.",
+                    badge: "Drenaje podal",
+                    title: "Vaciado linfático en dorso",
+                    instruction: "Guía la ejecución del barrido linfático suave sobre la cara dorsal del pie hacia los ganglios maleolares.",
+                    tutor: "Ordena pases suaves y ascendentes desde la base de los dedos rodeando ambos maleolos sin presionar huesos.",
+                    explanation: "Realizar en el dorso un deslizamiento ascendente canaliza la linfa hacia los ganglios.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["compre", "soltur", "tejido", "aplica", "altern", "genera", "muscul", "palma", "guia", "ejecuc"];
+                        const roots = ["dorso", "desliz", "gangli", "realiz", "ascend", "canali", "linfa", "guia", "ejecuc", "barrid"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'traffic',
-                    badge: "Secuencia respiratoria",
-                    title: "Trabajo en almohadillas",
+                    badge: "Aromaterapia integrada",
+                    title: "Dosificación de aceites esenciales",
                     instruction: "Marca afirmaciones correctas",
                     items: [
-                        { text: "El área refleja de los pulmones se estimula recorriendo las almohadillas debajo de los cuatro últimos dedos", color: "green" },
-                        { text: "La zona de la nariz se localiza en el borde externo del quinto dedo meñique", color: "red" },
-                        { text: "La caminata de pulgar horizontal sobre la línea del diafragma libera la restricción respiratoria", color: "green" },
-                        { text: "La estimulación respiratoria exige presionar el hueso de la muñeca hasta generar crujidos", color: "red" }
+                        { text: "La dilución segura de aceites esenciales en el aceite vehicular es del 2 al 2.5 por ciento", color: "green" },
+                        { text: "Los aceites esenciales de cítricos como bergamota pueden aplicarse puros sin riesgo de fototoxicidad", color: "red" },
+                        { text: "La esencia de lavanda brinda propiedades calmas aptas para cerrar la sesión de reflexología", color: "green" },
+                        { text: "Utilizar aceite de menta en sesiones nocturnas favorece el sueño profundo del consultante", color: "red" }
                     ].sort(() => Math.random() - 0.5),
-                    tutor: "Ubica el barrido sobre las almohadillas palmares y el paso transversal por la línea del diafragma.",
-                    explanation: "Recorrer las almohadillas, trabajar la línea del diafragma y liberar respiratoria equilibra el tórax."
+                    tutor: "Atiende a las proporciones de dilución en aceites portadores y la selección según la hora del turno.",
+                    explanation: "Respetar la dilución adecuada e integrar lavanda potencia el efecto sin provocar irritación."
                 },
                 {
                     type: 'text',
-                    badge: "Cierre armónico",
-                    title: "Respiración en el plexo solar",
-                    instruction: "Pauta la técnica de cierre presionando el punto del plexo solar coordinada con la respiración del paciente.",
-                    tutor: "Coloca el pulgar en el centro palmar, pide una inhalación profunda y presiona suavemente durante la exhalación.",
-                    explanation: "Presionar el centro palmar durante la inhalación y exhalación transmite una calma profunda.",
+                    badge: "Cierre de la sesión",
+                    title: "Maniobras de integración final",
+                    instruction: "Pauta el procedimiento de retirada de restos de crema y arropamiento térmico de los pies al concluir.",
+                    tutor: "Incluye la aplicación de una toalla tibia envoltoria, pases suaves de integración y cobijo para evitar frío.",
+                    explanation: "Envolver con toalla tibia los pies y brindar arropamiento térmico consolida la relajación.",
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ["centro", "inhala", "calma", "presio", "palmar", "durant", "exhala", "transm", "profun", "pauta"];
+                        const roots = ["toalla", "tibia", "arropa", "envolv", "pies", "brinda", "termic", "consol", "relaja", "pauta"];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
                 {
                     type: 'checklist',
-                    badge: "Técnica integrada",
-                    title: "Digitopresión Unión del Valle",
-                    instruction: "Compila la secuencia para localizar y presionar el punto de digitopresión \"Unión del Valle\" entre pulgar e índice.",
+                    badge: "Pautas domiciliarias",
+                    title: "Recomendaciones post-sesión",
+                    instruction: "Compila los tres consejos clave que se deben entregar al consultante antes de retirarse del gabinete.",
                     items: [
-                        { text: "Ubicar la depresión blando entre el primer y segundo metacarpiano", correct: true },
-                        { text: "Aplicar presión constante con pulgar e índice abrazando la mano", correct: true },
-                        { text: "Mantener la presión durante uno a dos minutos con respiración pausada", correct: true },
-                        { text: "Golpear con fuerza el pliegue con un martillo de reflejos", correct: false }
+                        { text: "Ingesta abundante de agua pura durante las horas siguientes", correct: true },
+                        { text: "Descanso relativo evitando ejercicios de alto impacto inmediatos", correct: true },
+                        { text: "Registro de posibles cambios transitorios en diuresis o sueño", correct: true },
+                        { text: "Realización de ayuno absoluto durante las siguientes 24 horas", correct: false }
                     ].sort(() => Math.random() - 0.5),
-                    tutor: "Busca el punto blando de intersección entre el pulgar e índice y aplica compresión bilateral.",
-                    explanation: "Identificar la depresión, ejercer presión bilateral y mantener el estímulo alivia tensiones."
+                    tutor: "Busca las pautas de hidratación, reposo moderado y observación de la respuesta depurativa.",
+                    explanation: "Aconsejar la ingesta de agua, el descanso adecuado y el registro de sensaciones completa la atención."
                 }
             ]
         };
